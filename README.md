@@ -5,7 +5,7 @@
 ![image](https://user-images.githubusercontent.com/48110180/195181196-a0b88844-bc56-437a-8432-1835eca1905b.png)
 
 
-##AList##
+**AList**
 
 https://github.com/alist-org/alist/releases
 
@@ -53,7 +53,7 @@ https://github.com/alist-org/alist/releases
 
 
 
-#RaiDrive
+**RaiDrive**
 
 https://www.raidrive.com.cn/download
 
@@ -76,18 +76,20 @@ https://github.com/RaiDrive
 
 ![image](https://user-images.githubusercontent.com/48110180/195184996-598e8cc0-839d-4dfb-9f87-06c8ab288922.png)
 
+![image](https://user-images.githubusercontent.com/48110180/195186623-b5aad614-99ee-4981-92d3-fde8eb3e432b.png)
 
 经过上述步骤之后，已经操作完毕。
 
+![image](https://user-images.githubusercontent.com/48110180/195186524-e6b1e779-ae82-4ea3-93c5-9fa8d9d25a54.png)
 
 
-#AList开机无窗口自启动
+**AList开机无窗口自启动**
 
 这两个软件需要一起开，都不能关，才能挂载。不过可以通过操作做到开机无窗口自启动。
 
 由于AList.exe的版本问题，v2版本可以双击或右键管理员启动，但是v3版本似乎只能cmd启动。
 
-#AList.exe v2（并不能保证这个方法不适用于AList.exe v3）
+**AList.exe v2（并不能保证这个方法不适用于AList.exe v3）**
 
 在AList.exe所在的目录下，创建一个txt文件，将以下代码复制进去，然后将txt另存为alist.bat文件在该目录下
 
@@ -123,7 +125,7 @@ cmd中打开“用户启动文件夹”的命令  shell:startup
 
 由于电脑本身配置的问题，可能出现RaiDrive先运行的情况，导致RaiDrive出现报错说“服务器积极拒绝”。多等一会儿，等bat文件运行完毕，这个报错就会解决。同时如果马上打开阿里网盘，可能会出现空白文件夹的情况，这个也是等一会儿就好了，但是百度网盘就不会有这种情况。
 
-#AList.exe v3（并不能保证这个方法不适用于AList.exe v2）
+**AList.exe v3（并不能保证这个方法不适用于AList.exe v2）**
 
 在AList.exe所在的目录下，创建一个txt文件，将以下代码复制进去，然后将txt另存为alist.vbs文件在该目录下
 
@@ -133,6 +135,6 @@ ws.run "cmd /c F:/AList/alist-windows-4.0-amd64.exe",vbhide
 
 创建alist.vbs文件的快捷方式，将快捷方式复制或移动到系统启动文件夹即可实现开机无窗口自启动。
 
-#关于手机访问的问题
+**关于手机访问的问题**
 
 （未验证）在手机上安装一个nPlayer，即可在手机上看资源。
