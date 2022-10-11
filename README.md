@@ -1,3 +1,5 @@
+# windows环境下使用AList与RaiDrive挂载云盘为本地磁盘
+
 面向对象：1. 比如surface pro的硬盘很小，可以选择这种方法将云盘当硬盘用；2. 可以较快地在各设备端之间进行文件传输；3. 数据、图片视频、游戏大作等实在是太大太多，硬盘确实装不下，直接用网盘。
 
 实际效果：可以用本地装好的软件，打开对应的资源，游戏也可以直接解压玩，同时包括复制、编辑、转移文件，都跟操作本地硬盘一模一样。
@@ -5,7 +7,7 @@
 ![image](https://user-images.githubusercontent.com/48110180/195181196-a0b88844-bc56-437a-8432-1835eca1905b.png)
 
 
-**AList**
+## AList
 
 https://github.com/alist-org/alist/releases
 
@@ -52,8 +54,7 @@ https://github.com/alist-org/alist/releases
 之后也许会对OneDrive进行挂载
 
 
-
-**RaiDrive**
+## RaiDrive
 
 https://www.raidrive.com.cn/download
 
@@ -83,23 +84,22 @@ https://github.com/RaiDrive
 ![image](https://user-images.githubusercontent.com/48110180/195186524-e6b1e779-ae82-4ea3-93c5-9fa8d9d25a54.png)
 
 
-**AList开机无窗口自启动**
+## AList开机无窗口自启动
 
 这两个软件需要一起开，都不能关，才能挂载。不过可以通过操作做到开机无窗口自启动。
 
 由于AList.exe的版本问题，v2版本可以双击或右键管理员启动，但是v3版本似乎只能cmd启动。
 
-**AList.exe v2（并不能保证这个方法不适用于AList.exe v3）**
+### AList.exe v2（并不能保证这个方法不适用于AList.exe v3）
 
 在AList.exe所在的目录下，创建一个txt文件，将以下代码复制进去，然后将txt另存为alist.bat文件在该目录下
 
+```batch
 @echo off
-
 start /min "" "F:\AList\alist-windows-4.0-amd64.exe"
-
 CHOICE /T 5 /C ync /CS /D y /n
-
 taskkill /f /im conhost.exe
+```
 
 代码中的F:\AList\alist-windows-4.0-amd64.exe对应于图中的目录，看你exe文件的目录，不同人不一样
 
@@ -125,16 +125,17 @@ cmd中打开“用户启动文件夹”的命令  shell:startup
 
 由于电脑本身配置的问题，可能出现RaiDrive先运行的情况，导致RaiDrive出现报错说“服务器积极拒绝”。多等一会儿，等bat文件运行完毕，这个报错就会解决。同时如果马上打开阿里网盘，可能会出现空白文件夹的情况，这个也是等一会儿就好了，但是百度网盘就不会有这种情况。
 
-**AList.exe v3（并不能保证这个方法不适用于AList.exe v2）**
+### AList.exe v3（并不能保证这个方法不适用于AList.exe v2）
 
 在AList.exe所在的目录下，创建一个txt文件，将以下代码复制进去，然后将txt另存为alist.vbs文件在该目录下
 
+```batch
 Set ws = CreateObject("Wscript.Shell") 
-
 ws.run "cmd /c F:/AList/alist-windows-4.0-amd64.exe",vbhide
+```
 
 创建alist.vbs文件的快捷方式，将快捷方式复制或移动到系统启动文件夹即可实现开机无窗口自启动。
 
-**关于手机访问的问题**
+## 关于手机访问的问题
 
 （未验证）在手机上安装一个nPlayer，即可在手机上看资源。
