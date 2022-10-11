@@ -5,7 +5,7 @@
 ![image](https://user-images.githubusercontent.com/48110180/195181196-a0b88844-bc56-437a-8432-1835eca1905b.png)
 
 
-#AList
+##AList##
 
 https://github.com/alist-org/alist/releases
 
@@ -65,53 +65,74 @@ https://github.com/RaiDrive
 
 期间会有一个弹窗，选择安装：
 
+![image](https://user-images.githubusercontent.com/48110180/195184957-da054a7b-1dd5-448b-8bf4-a3984bf11824.png)
 
 打开软件，点击这个添加：
 
-
-第二个重点，按下图所示设置，这里需要特别注意3个参数值：127.0.0.1、5244、/dav
-
+![image](https://user-images.githubusercontent.com/48110180/195184974-58445caf-cfcd-42c5-9d3e-c7ad2b438137.png)
 
 
-​
+第二个重点，按下图所示设置，这里需要特别注意3个参数值：127.0.0.1、5244、/dav。设置好后，点击连接。
 
-编辑
-添加图片注释，不超过 140 字（可选）
+![image](https://user-images.githubusercontent.com/48110180/195184996-598e8cc0-839d-4dfb-9f87-06c8ab288922.png)
+
+
 经过上述步骤之后，已经操作完毕。
-​
 
-编辑
 
-切换为居中
-添加图片注释，不超过 140 字（可选）
-AList开机无窗口自启动
+
+#AList开机无窗口自启动
+
 这两个软件需要一起开，都不能关，才能挂载。不过可以通过操作做到开机无窗口自启动。
-由于AList.exe的版本问题，v2版本可以双击或右键管理员启动，但是v3版本似乎只能cmd启动。
-AList.exe v2（并不能保证这个方法不适用于AList.exe v3）
-在AList.exe所在的目录下，创建一个txt文件，将以下代码复制进去，然后将txt另存为alist.bat文件在该目录下
-@echo off
-start /min "" "F:\AList\alist-windows-4.0-amd64.exe"
-CHOICE /T 5 /C ync /CS /D y /n
-taskkill /f /im conhost.exe
-​
 
-编辑
+由于AList.exe的版本问题，v2版本可以双击或右键管理员启动，但是v3版本似乎只能cmd启动。
+
+#AList.exe v2（并不能保证这个方法不适用于AList.exe v3）
+
+在AList.exe所在的目录下，创建一个txt文件，将以下代码复制进去，然后将txt另存为alist.bat文件在该目录下
+
+@echo off
+
+start /min "" "F:\AList\alist-windows-4.0-amd64.exe"
+
+CHOICE /T 5 /C ync /CS /D y /n
+
+taskkill /f /im conhost.exe
+
 代码中的F:\AList\alist-windows-4.0-amd64.exe对应于图中的目录，看你exe文件的目录，不同人不一样
+
 创建alist.bat文件的快捷方式，将快捷方式复制或移动到系统启动文件夹即可实现开机无窗口自启动。
+
 Windows系统都有一个“启动”文件夹，把需要打开的程序的快捷方式或脚本放到“启动”文件夹里，就可以实现开机自启动。启动”文件夹分为两种：“系统启动文件夹”和“用户启动文件夹”。
+
 系统启动文件夹：
+
 Win10系统“启动”文件夹的路径为： *X:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp*(注：X为Win系统盘盘符)
+
 如果想要实现应用程序在所有的用户登录系统后都能自动启动，就把该应用程序的快捷方式放到“系统启动文件夹”里；
+
 cmd中打开“系统启动文件夹”的命令  shell:Common Startup  或者 %programdata%\Microsoft\Windows\Start Menu\Programs\Startup
+
 用户启动文件夹：
+
 Win某个用户的“启动”文件夹路径为：*X:\Users\用户名\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup*，
+
 如果想要实现某个应用程序只在某个用户登录系统时自动启动，那么就把该应用程序的快捷方式放到这个用户的“启动”文件夹里。
+
 cmd中打开“用户启动文件夹”的命令  shell:startup
+
 由于电脑本身配置的问题，可能出现RaiDrive先运行的情况，导致RaiDrive出现报错说“服务器积极拒绝”。多等一会儿，等bat文件运行完毕，这个报错就会解决。同时如果马上打开阿里网盘，可能会出现空白文件夹的情况，这个也是等一会儿就好了，但是百度网盘就不会有这种情况。
-AList.exe v3（并不能保证这个方法不适用于AList.exe v2）
+
+#AList.exe v3（并不能保证这个方法不适用于AList.exe v2）
+
 在AList.exe所在的目录下，创建一个txt文件，将以下代码复制进去，然后将txt另存为alist.vbs文件在该目录下
+
 Set ws = CreateObject("Wscript.Shell") 
+
 ws.run "cmd /c F:/AList/alist-windows-4.0-amd64.exe",vbhide
+
 创建alist.vbs文件的快捷方式，将快捷方式复制或移动到系统启动文件夹即可实现开机无窗口自启动。
-关于手机访问的问题
+
+#关于手机访问的问题
+
 （未验证）在手机上安装一个nPlayer，即可在手机上看资源。
