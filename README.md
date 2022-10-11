@@ -139,3 +139,11 @@ ws.run "cmd /c F:/AList/alist-windows-4.0-amd64.exe",vbhide
 ## 关于手机访问的问题
 
 （未验证）在手机上安装一个nPlayer，即可在手机上看资源。
+
+## 更换磁盘图标
+
+觉得原来的图标丑的话，可以用软件或者自己手动改。
+
+![image](https://user-images.githubusercontent.com/48110180/195192682-41e3e40e-7028-4ec3-8a51-1a926ec45aff.png)
+
+
