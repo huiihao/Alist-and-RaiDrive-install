@@ -147,4 +147,4 @@ ws.run "cmd /c F:/AList/alist-windows-4.0-amd64.exe",vbhide
 ![image](https://user-images.githubusercontent.com/48110180/195192682-41e3e40e-7028-4ec3-8a51-1a926ec45aff.png)
 
 ---
-[![](https://api.star-history.com/svg?repos=huiihao/Spiral&type=Date)](https://star-history.com/#huiihao/Spiral&Date)
+[![](https://api.star-history.com/svg?repos=huiihao/Spiral&type=Date)](https://star-history.com/#huiihao/Alist-and-RaiDrive-install&Date)
